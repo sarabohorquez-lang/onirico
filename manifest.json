@@ -1,8 +1,8 @@
 {
-"name": "Nombre de su App",
+"name": "Oniric Dance",
 "short_name": "Apodo",
 "start_url": "index.html",
 "display": "standalone",
-"background_color": "#f0f0f0",
-"theme_color": "83DEDD"
+"background_color": "#7DF4FF",
+"theme_color": "#F0F2F2"
 }
