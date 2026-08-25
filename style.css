@@ -1,0 +1,45 @@
+
+
+.contenedor-app {
+  background-color: #f0f0f0;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.mi-header {
+  background-color: #2e7d32; /* ESTE ES TU THEME_COLOR */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.app-logo {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.contenido {
+  padding: 20px;
+  text-align: center;
+}
+
+.boton-app {
+  background-color: #4caf50; 
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s; /* Para que los cambios sean suaves */
+}
+.boton-app:active
+{
+  transform: scale(0.95); /* El botón se encoge un poquito al tocarlo */
+  background-color: #388e3c; /* Se pone un verde más oscuro */
+}
