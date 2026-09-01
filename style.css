@@ -430,3 +430,387 @@ body::before{
     background-size:180px 180px;
     opacity:.6;
 }
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #fff7fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+    width: 100%;
+    background: linear-gradient(90deg, #7b1fa2, #e91e63);
+    color: white;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#navegacion {
+    display: flex;
+    gap: 25px;
+}
+
+#navegacion a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#navegacion a:hover {
+    color: #ffd6ef;
+}
+
+.btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+.inicio {
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(91, 24, 116, 0.72),
+            rgba(214, 35, 104, 0.72)
+        ),
+        url("imagenes/danza.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio-texto {
+    max-width: 800px;
+    color: white;
+}
+
+.inicio h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 30px;
+
+    background-color: white;
+    color: #8e24aa;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.seccion h2,
+.conclusion h2 {
+    font-size: 38px;
+    color: #8e24aa;
+    margin-bottom: 25px;
+}
+
+.seccion > p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-size: 18px;
+}
+
+.fondo {
+    background-color: #f9e6f5;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjetas {
+    max-width: 1100px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta span {
+    font-size: 40px;
+}
+
+.tarjeta h3 {
+    color: #d81b60;
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+
+/* =========================
+   ELEMENTOS
+========================= */
+
+.lista-elementos {
+    max-width: 900px;
+    margin: 40px auto;
+
+    display: grid;
+    gap: 20px;
+}
+
+.lista-elementos div {
+    background-color: white;
+    padding: 25px;
+
+    border-left: 7px solid #e91e63;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+.lista-elementos h3 {
+    color: #8e24aa;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   EXPRESIONES
+========================= */
+
+.expresiones {
+    max-width: 900px;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.expresiones div {
+    background: linear-gradient(135deg, #ab47bc, #ec407a);
+    color: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.expresiones div:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CONSEJOS
+========================= */
+
+.consejos {
+    max-width: 800px;
+    margin: 30px auto;
+
+    text-align: left;
+
+    background-color: white;
+
+    padding: 30px 50px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.consejos li {
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+
+/* =========================
+   CONCLUSIÓN
+========================= */
+
+.conclusion {
+    padding: 70px 8%;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #7b1fa2,
+        #e91e63
+    );
+
+    color: white;
+}
+
+.conclusion h2 {
+    color: white;
+}
+
+.conclusion p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 19px;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    background-color: #311b3b;
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .btn-menu {
+        display: block;
+    }
+
+    #navegacion {
+        display: none;
+
+        position: absolute;
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        background-color: #7b1fa2;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 20px;
+    }
+
+    #navegacion.menu-visible {
+        display: flex;
+    }
+
+    .inicio h1 {
+        font-size: 42px;
+    }
+
+    .inicio p {
+        font-size: 18px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .expresiones {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding: 50px 6%;
+    }
+
+    .seccion h2,
+    .conclusion h2 {
+        font-size: 30px;
+    }
+}
