@@ -38,4 +38,12 @@ formulario.addEventListener('submit', (evento) => {
     
     // 5. Limpiamos las cajas de texto automáticamente
     formulario.reset();
+    function mostrarMenu() {
+
+    const menu = document.getElementById("navegacion");
+
+    menu.classList.toggle("menu-visible");
+
+}
 });
+
