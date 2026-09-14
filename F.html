@@ -1,414 +1,351 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos de la Danza</title>
 
-    <link rel="stylesheet" href="style.css">
+```
+<title>Fundamentos de la Danza - Oniric Dance</title>
+
+<style>
+    /* =========================
+       ESTILO GENERAL
+    ========================= */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #eaf6ff;
+        color: #123b5d;
+    }
+
+
+    /* =========================
+       ENCABEZADO
+    ========================= */
+
+    header {
+        background-color: #0d47a1;
+        color: white;
+        text-align: center;
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        margin-top: 8px;
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       CONTENIDO
+    ========================= */
+
+    main {
+        max-width: 1000px;
+        margin: auto;
+        padding: 30px 20px;
+    }
+
+    .introduccion {
+        background-color: white;
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 10px rgba(0, 70, 130, 0.15);
+        text-align: center;
+    }
+
+    .introduccion h2 {
+        color: #1565c0;
+        margin-bottom: 15px;
+    }
+
+
+    /* =========================
+       TARJETAS
+    ========================= */
+
+    .fundamentos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .tarjeta {
+        background-color: white;
+        padding: 25px;
+        border-radius: 15px;
+        border-left: 6px solid #1976d2;
+        box-shadow: 0 4px 10px rgba(0, 70, 130, 0.15);
+    }
+
+    .tarjeta .emoji {
+        font-size: 32px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .tarjeta h3 {
+        color: #1565c0;
+        margin-bottom: 10px;
+    }
+
+    .tarjeta p {
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       CONSEJO
+    ========================= */
+
+    .consejo {
+        margin-top: 30px;
+        background-color: #bbdefb;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .consejo h2 {
+        color: #0d47a1;
+        margin-bottom: 10px;
+    }
+
+
+    /* =========================
+       BOTÓN
+    ========================= */
+
+    .volver {
+        display: block;
+        width: fit-content;
+        margin: 30px auto 0;
+        padding: 12px 25px;
+
+        background-color: #1565c0;
+        color: white;
+
+        text-decoration: none;
+        border-radius: 10px;
+
+        transition: 0.3s;
+    }
+
+    .volver:hover {
+        background-color: #0d47a1;
+    }
+
+
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 600px) {
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        .fundamentos {
+            grid-template-columns: 1fr;
+        }
+
+        main {
+            padding: 20px 15px;
+        }
+    }
+
+</style>
+```
+
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
-    <header class="encabezado">
-        <div class="logo">🗐 DANZA</div>
+```
+<!-- ENCABEZADO -->
 
-        <button class="btn-menu" onclick="mostrarMenu()">☰</button>
+<header>
 
-        <nav id="navegacion" class="menu-oculto">
-            <a href="#inicio">Inicio</a>
-            <a href="#fundamentos">Fundamentos</a>
-            <a href="#elementos">Elementos</a>
-            <a href="#tipos">Tipos de danza</a>
-            <a href="#beneficios">Beneficios</a>
-        </nav>
-    </header>
+    <h1>☰ Oniric Dance</h1>
+
+    <p>Fundamentos de la danza</p>
+
+</header>
 
 
-    <!-- INICIO -->
-    <section id="inicio" class="inicio">
-
-        <div class="inicio-texto">
-            <h1>Fundamentos de la Danza</h1>
-
-            <p>
-                La danza es una forma de expresión artística que utiliza
-                el movimiento del cuerpo acompañado por el ritmo y la música.
-            </p>
-
-            <a href="#fundamentos" class="boton">
-                Conocer más
-            </a>
-        </div>
-
-    </section>
-
+<main>
 
     <!-- INTRODUCCIÓN -->
-    <section class="seccion">
 
-        <h2>¿Qué es la danza?</h2>
+    <section class="introduccion">
+
+        <h2>¿Qué son los fundamentos?</h2>
 
         <p>
-            La danza es un arte basado en el movimiento del cuerpo.
-            A través de ella las personas pueden expresar emociones,
-            contar historias, representar culturas y comunicarse sin
-            necesidad de utilizar palabras.
+            Los fundamentos de la danza son los elementos básicos
+            que permiten realizar movimientos de manera organizada,
+            coordinada y expresiva.
         </p>
 
         <p>
-            Para bailar correctamente es importante conocer algunos
-            fundamentos como el ritmo, el espacio, el tiempo, el movimiento,
-            la coordinación, el equilibrio y la expresión corporal.
+            Conocerlos ayuda a mejorar el control del cuerpo y facilita
+            el aprendizaje de diferentes estilos de danza.
         </p>
 
     </section>
 
 
     <!-- FUNDAMENTOS -->
-    <section id="fundamentos" class="seccion">
 
-        <h2>💃 Fundamentos principales</h2>
-
-        <div class="tarjetas">
-
-            <article class="tarjeta">
-                <span>🎵</span>
-                <h3>Ritmo</h3>
-                <p>
-                    Es la organización de los movimientos siguiendo
-                    pulsaciones, tiempos y patrones musicales.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <span>⏱️</span>
-                <h3>Tiempo</h3>
-                <p>
-                    Determina la velocidad y duración de los movimientos
-                    realizados durante una coreografía.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <span>📍</span>
-                <h3>Espacio</h3>
-                <p>
-                    Es el lugar donde se mueve el bailarín. Incluye
-                    direcciones, niveles, trayectorias y posiciones.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <span>🕺</span>
-                <h3>Movimiento</h3>
-                <p>
-                    Es la acción física que realiza el cuerpo para crear
-                    diferentes pasos y formas de expresión.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <span>⚖️</span>
-                <h3>Equilibrio</h3>
-                <p>
-                    Permite mantener el control y la estabilidad del cuerpo
-                    durante los diferentes movimientos.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <span>🤸</span>
-                <h3>Coordinación</h3>
-                <p>
-                    Consiste en controlar diferentes partes del cuerpo
-                    de manera organizada y sincronizada.
-                </p>
-            </article>
-
-        </div>
-
-    </section>
+    <section class="fundamentos">
 
 
-    <!-- ELEMENTOS -->
-    <section id="elementos" class="seccion fondo">
+        <!-- MOVIMIENTO -->
 
-        <h2>🎭 Elementos de la danza</h2>
+        <article class="tarjeta">
 
-        <div class="lista-elementos">
+            <span class="emoji">↔</span>
 
-            <div>
-                <h3>1. Cuerpo</h3>
-                <p>
-                    Es el instrumento principal de la danza. El bailarín
-                    utiliza diferentes partes de su cuerpo para realizar
-                    movimientos.
-                </p>
-            </div>
+            <h3>Movimiento</h3>
 
-            <div>
-                <h3>2. Espacio</h3>
-                <p>
-                    Determina dónde se realizan los movimientos y cómo
-                    se desplaza el bailarín.
-                </p>
-            </div>
+            <p>
+                Es la acción principal de la danza. El cuerpo puede
+                realizar movimientos como caminar, girar, saltar,
+                desplazarse o cambiar de posición.
+            </p>
 
-            <div>
-                <h3>3. Tiempo</h3>
-                <p>
-                    Está relacionado con la duración, velocidad y ritmo
-                    de los movimientos.
-                </p>
-            </div>
+        </article>
 
-            <div>
-                <h3>4. Energía</h3>
-                <p>
-                    Es la intensidad o fuerza utilizada para realizar
-                    un movimiento.
-                </p>
-            </div>
 
-            <div>
-                <h3>5. Expresión</h3>
-                <p>
-                    Permite transmitir sentimientos, emociones e ideas
-                    mediante el movimiento corporal.
-                </p>
-            </div>
+        <!-- ESPACIO -->
 
-        </div>
+        <article class="tarjeta">
+
+            <span class="emoji">⌖</span>
+
+            <h3>Espacio</h3>
+
+            <p>
+                Es el lugar donde se realiza la danza. Incluye las
+                direcciones, los niveles, las trayectorias y los
+                desplazamientos que realiza el bailarín.
+            </p>
+
+        </article>
+
+
+        <!-- TIEMPO -->
+
+        <article class="tarjeta">
+
+            <span class="emoji">◷</span>
+
+            <h3>Tiempo</h3>
+
+            <p>
+                Permite organizar los movimientos según su duración,
+                velocidad y las pausas que existen durante una
+                coreografía.
+            </p>
+
+        </article>
+
+
+        <!-- RITMO -->
+
+        <article class="tarjeta">
+
+            <span class="emoji">♫</span>
+
+            <h3>Ritmo</h3>
+
+            <p>
+                Es la organización de los sonidos y movimientos.
+                Permite que los bailarines coordinen sus movimientos
+                con la música.
+            </p>
+
+        </article>
+
+
+        <!-- ENERGÍA -->
+
+        <article class="tarjeta">
+
+            <span class="emoji">✦</span>
+
+            <h3>Energía</h3>
+
+            <p>
+                Representa la fuerza y la intensidad utilizada al
+                realizar un movimiento. Un movimiento puede ser
+                suave, fuerte, rápido o lento.
+            </p>
+
+        </article>
+
+
+        <!-- EXPRESIÓN -->
+
+        <article class="tarjeta">
+
+            <span class="emoji">♡</span>
+
+            <h3>Expresión</h3>
+
+            <p>
+                Permite transmitir emociones, sentimientos e ideas
+                mediante los movimientos del cuerpo y la interpretación
+                del bailarín.
+            </p>
+
+        </article>
 
     </section>
 
 
-    <!-- POSICIONES -->
-    <section class="seccion">
+    <!-- CONSEJO -->
 
-        <h2>🩰 Posiciones y movimientos básicos</h2>
+    <section class="consejo">
 
-        <div class="tarjetas">
-
-            <article class="tarjeta">
-                <h3>Postura</h3>
-                <p>
-                    Mantener correctamente alineados el cuerpo, la cabeza,
-                    espalda, brazos y piernas.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>Desplazamiento</h3>
-                <p>
-                    Movimiento del bailarín de un lugar a otro mediante
-                    pasos, saltos o giros.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>Giro</h3>
-                <p>
-                    Movimiento en el que el cuerpo cambia de dirección
-                    alrededor de un eje.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>Salto</h3>
-                <p>
-                    Movimiento en el que el cuerpo se separa del suelo
-                    durante un momento.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>Flexión</h3>
-                <p>
-                    Movimiento que consiste en doblar una articulación,
-                    como las rodillas o los brazos.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>Extensión</h3>
-                <p>
-                    Movimiento que permite estirar una parte del cuerpo
-                    y ampliar su posición.
-                </p>
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- TIPOS -->
-    <section id="tipos" class="seccion fondo">
-
-        <h2>🌎 Tipos de danza</h2>
-
-        <div class="tarjetas">
-
-            <article class="tarjeta">
-                <h3>🩰 Ballet</h3>
-                <p>
-                    Danza caracterizada por la técnica, la precisión,
-                    la postura y los movimientos controlados.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>🔥 Danza contemporánea</h3>
-                <p>
-                    Busca expresar emociones e ideas mediante movimientos
-                    libres y creativos.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>🎤 Danza urbana</h3>
-                <p>
-                    Incluye estilos como hip hop, popping, locking
-                    y breakdance.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>💃 Danza latina</h3>
-                <p>
-                    Incluye estilos como salsa, merengue, bachata,
-                    cha-cha-chá y otros ritmos.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>🌺 Danza folclórica</h3>
-                <p>
-                    Representa las tradiciones, costumbres e identidad
-                    cultural de diferentes pueblos.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>🎭 Danza teatral</h3>
-                <p>
-                    Combina movimientos, actuación y expresión para
-                    representar historias.
-                </p>
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- EXPRESIÓN -->
-    <section class="seccion">
-
-        <h2>Expresión corporal</h2>
+        <h2>✧ Recuerda ✧</h2>
 
         <p>
-            La expresión corporal es fundamental en la danza porque permite
-            comunicar emociones y pensamientos mediante el cuerpo.
-        </p>
-
-        <div class="expresiones">
-
-            <div>😊 Alegría</div>
-            <div>😢 Tristeza</div>
-            <div>😡 Enojo</div>
-            <div>😨 Miedo</div>
-            <div>😍 Amor</div>
-            <div>😌 Tranquilidad</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- BENEFICIOS -->
-    <section id="beneficios" class="seccion fondo">
-
-        <h2>✨ Beneficios de la danza</h2>
-
-        <div class="tarjetas">
-
-            <article class="tarjeta">
-                <h3>💪 Beneficios físicos</h3>
-                <p>
-                    Mejora la fuerza, flexibilidad, resistencia,
-                    coordinación y equilibrio.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>🧠 Beneficios mentales</h3>
-                <p>
-                    Ayuda a desarrollar la memoria, concentración
-                    y creatividad.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>❤️ Beneficios emocionales</h3>
-                <p>
-                    Puede ayudar a expresar emociones y fortalecer
-                    la confianza personal.
-                </p>
-            </article>
-
-            <article class="tarjeta">
-                <h3>👥 Beneficios sociales</h3>
-                <p>
-                    Favorece el trabajo en equipo, la comunicación
-                    y la convivencia.
-                </p>
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONSEJOS -->
-    <section class="seccion">
-
-        <h2>🎯 Consejos para aprender danza</h2>
-
-        <ol class="consejos">
-            <li>Realizar un buen calentamiento antes de bailar.</li>
-            <li>Mantener una postura adecuada.</li>
-            <li>Practicar regularmente.</li>
-            <li>Escuchar y seguir el ritmo de la música.</li>
-            <li>Trabajar la coordinación y el equilibrio.</li>
-            <li>Aprender los movimientos de manera progresiva.</li>
-            <li>Expresar emociones mediante el movimiento.</li>
-            <li>Respetar el propio cuerpo y sus límites.</li>
-        </ol>
-
-    </section>
-
-
-    <!-- CONCLUSIÓN -->
-    <section class="conclusion">
-
-        <h2>🌟 Conclusión</h2>
-
-        <p>
-            La danza es mucho más que aprender pasos. Es una disciplina
-            que combina movimiento, música, espacio, tiempo y expresión.
-            Conocer sus fundamentos permite mejorar la técnica y utilizar
-            el cuerpo como una herramienta para comunicar emociones,
-            historias y cultura.
+            La danza no consiste solamente en aprender pasos.
+            También es importante controlar el cuerpo, seguir el ritmo,
+            utilizar el espacio y expresar emociones.
         </p>
 
     </section>
 
 
-    <script src="script.js"></script>
+    <!-- VOLVER -->
+
+    <a href="F.html" class="volver">
+        ← Volver a Fundamentos
+    </a>
+
+</main>
+```
+
+</body>
+
+</html>
+
 
 </body>
 </html>
