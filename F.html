@@ -1,350 +1,237 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de la Danza</title>
 
-```
-<title>Fundamentos de la Danza - Oniric Dance</title>
-
-<style>
-    /* =========================
-       ESTILO GENERAL
-    ========================= */
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #eaf6ff;
-        color: #123b5d;
-    }
-
-
-    /* =========================
-       ENCABEZADO
-    ========================= */
-
-    header {
-        background-color: #0d47a1;
-        color: white;
-        text-align: center;
-        padding: 25px 15px;
-    }
-
-    header h1 {
-        font-size: 30px;
-    }
-
-    header p {
-        margin-top: 8px;
-        font-size: 16px;
-    }
-
-
-    /* =========================
-       CONTENIDO
-    ========================= */
-
-    main {
-        max-width: 1000px;
-        margin: auto;
-        padding: 30px 20px;
-    }
-
-    .introduccion {
-        background-color: white;
-        padding: 25px;
-        border-radius: 15px;
-        margin-bottom: 30px;
-        box-shadow: 0 4px 10px rgba(0, 70, 130, 0.15);
-        text-align: center;
-    }
-
-    .introduccion h2 {
-        color: #1565c0;
-        margin-bottom: 15px;
-    }
-
-
-    /* =========================
-       TARJETAS
-    ========================= */
-
-    .fundamentos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .tarjeta {
-        background-color: white;
-        padding: 25px;
-        border-radius: 15px;
-        border-left: 6px solid #1976d2;
-        box-shadow: 0 4px 10px rgba(0, 70, 130, 0.15);
-    }
-
-    .tarjeta .emoji {
-        font-size: 32px;
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .tarjeta h3 {
-        color: #1565c0;
-        margin-bottom: 10px;
-    }
-
-    .tarjeta p {
-        line-height: 1.6;
-    }
-
-
-    /* =========================
-       CONSEJO
-    ========================= */
-
-    .consejo {
-        margin-top: 30px;
-        background-color: #bbdefb;
-        padding: 25px;
-        border-radius: 15px;
-        text-align: center;
-    }
-
-    .consejo h2 {
-        color: #0d47a1;
-        margin-bottom: 10px;
-    }
-
-
-    /* =========================
-       BOTÓN
-    ========================= */
-
-    .volver {
-        display: block;
-        width: fit-content;
-        margin: 30px auto 0;
-        padding: 12px 25px;
-
-        background-color: #1565c0;
-        color: white;
-
-        text-decoration: none;
-        border-radius: 10px;
-
-        transition: 0.3s;
-    }
-
-    .volver:hover {
-        background-color: #0d47a1;
-    }
-
-
-    /* =========================
-       CELULAR
-    ========================= */
-
-    @media (max-width: 600px) {
-
-        header h1 {
-            font-size: 24px;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .fundamentos {
-            grid-template-columns: 1fr;
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #170b2e, #3b176d, #8e44ad);
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #e8d9ff;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d8a7ff;
         }
 
         main {
-            padding: 20px 15px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
         }
-    }
 
-</style>
-```
+        section {
+            margin-bottom: 50px;
+        }
 
-</head>
+        h2 {
+            color: #e2baff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
-<body>
+        .intro {
+            text-align: center;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: auto;
+        }
 
-```
-<!-- ENCABEZADO -->
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            color: #f0c9ff;
+            margin-bottom: 10px;
+        }
+
+        .elementos {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        ul {
+            margin-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.35);
+            color: #ddd;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+        }
+    </style>
+    <section id="fundamentos">
+    <h2>✦ Fundamentos principales ✦</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>♪ Ritmo</h3>
+            <p>
+                Es la relación entre los movimientos y el tiempo.
+                Permite coordinar los pasos y movimientos con la música.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>◇ Movimiento</h3>
+            <p>
+                Es la base de la danza. Incluye desplazamientos, giros,
+                saltos, posiciones y gestos corporales.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>◈ Espacio</h3>
+            <p>
+                Se refiere al lugar donde se desarrolla la danza y a la
+                forma en que el bailarín utiliza direcciones y niveles.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>✧ Energía</h3>
+            <p>
+                Determina la intensidad, fuerza y calidad de los movimientos
+                realizados por el cuerpo.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>♡ Expresión</h3>
+            <p>
+                Permite transmitir emociones, ideas e historias mediante
+                gestos y movimientos corporales.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>∞ Coordinación</h3>
+            <p>
+                Consiste en controlar diferentes partes del cuerpo para
+                realizar movimientos de manera precisa y armoniosa.
+            </p>
+        </div>
+
+    </div>
+</section>
 <header>
-
-    <h1>☰ Oniric Dance</h1>
-
-    <p>Fundamentos de la danza</p>
-
+    <p class="decoracion">♪ ───── ✦ ───── ♪</p>
+    <h1>Fundamentos de la Danza</h1>
+    <p>El movimiento como forma de expresión, arte y comunicación</p>
+    <p class="decoracion">◇ ───── ♫ ───── ◇</p>
 </header>
+<section id="beneficios">
+    <h2>✦ Beneficios de practicar danza ✦</h2>
 
+    <div class="cards">
 
-<main>
-
-    <!-- INTRODUCCIÓN -->
-
-    <section class="introduccion">
-
-        <h2>¿Qué son los fundamentos?</h2>
-
-        <p>
-            Los fundamentos de la danza son los elementos básicos
-            que permiten realizar movimientos de manera organizada,
-            coordinada y expresiva.
-        </p>
-
-        <p>
-            Conocerlos ayuda a mejorar el control del cuerpo y facilita
-            el aprendizaje de diferentes estilos de danza.
-        </p>
-
-    </section>
-
-
-    <!-- FUNDAMENTOS -->
-
-    <section class="fundamentos">
-
-
-        <!-- MOVIMIENTO -->
-
-        <article class="tarjeta">
-
-            <span class="emoji">↔</span>
-
-            <h3>Movimiento</h3>
-
+        <div class="card">
+            <h3>♡ Salud física</h3>
             <p>
-                Es la acción principal de la danza. El cuerpo puede
-                realizar movimientos como caminar, girar, saltar,
-                desplazarse o cambiar de posición.
+                Ayuda a mejorar la resistencia, flexibilidad, equilibrio
+                y coordinación.
             </p>
+        </div>
 
-        </article>
-
-
-        <!-- ESPACIO -->
-
-        <article class="tarjeta">
-
-            <span class="emoji">⌖</span>
-
-            <h3>Espacio</h3>
-
+        <div class="card">
+            <h3>◇ Concentración</h3>
             <p>
-                Es el lugar donde se realiza la danza. Incluye las
-                direcciones, los niveles, las trayectorias y los
-                desplazamientos que realiza el bailarín.
+                Favorece la memoria, la atención y el aprendizaje de
+                secuencias de movimientos.
             </p>
+        </div>
 
-        </article>
-
-
-        <!-- TIEMPO -->
-
-        <article class="tarjeta">
-
-            <span class="emoji">◷</span>
-
-            <h3>Tiempo</h3>
-
+        <div class="card">
+            <h3>✧ Bienestar</h3>
             <p>
-                Permite organizar los movimientos según su duración,
-                velocidad y las pausas que existen durante una
-                coreografía.
+                Permite expresar emociones y puede contribuir al bienestar
+                físico y emocional.
             </p>
+        </div>
 
-        </article>
-
-
-        <!-- RITMO -->
-
-        <article class="tarjeta">
-
-            <span class="emoji">♫</span>
-
-            <h3>Ritmo</h3>
-
+        <div class="card">
+            <h3>∞ Socialización</h3>
             <p>
-                Es la organización de los sonidos y movimientos.
-                Permite que los bailarines coordinen sus movimientos
-                con la música.
+                Promueve el trabajo en equipo, la comunicación y la
+                convivencia.
             </p>
+        </div>
 
-        </article>
+    </div>
+</section>
 
-
-        <!-- ENERGÍA -->
-
-        <article class="tarjeta">
-
-            <span class="emoji">✦</span>
-
-            <h3>Energía</h3>
-
-            <p>
-                Representa la fuerza y la intensidad utilizada al
-                realizar un movimiento. Un movimiento puede ser
-                suave, fuerte, rápido o lento.
-            </p>
-
-        </article>
-
-
-        <!-- EXPRESIÓN -->
-
-        <article class="tarjeta">
-
-            <span class="emoji">♡</span>
-
-            <h3>Expresión</h3>
-
-            <p>
-                Permite transmitir emociones, sentimientos e ideas
-                mediante los movimientos del cuerpo y la interpretación
-                del bailarín.
-            </p>
-
-        </article>
-
-    </section>
-
-
-    <!-- CONSEJO -->
-
-    <section class="consejo">
-
-        <h2>✧ Recuerda ✧</h2>
-
-        <p>
-            La danza no consiste solamente en aprender pasos.
-            También es importante controlar el cuerpo, seguir el ritmo,
-            utilizar el espacio y expresar emociones.
-        </p>
-
-    </section>
-
-
-    <!-- VOLVER -->
-
-    <a href="F.html" class="volver">
-        ← Volver a Fundamentos
-    </a>
-
-</main>
-```
-
-</body>
-
-</html>
 
 
 </body>
