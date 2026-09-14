@@ -43,6 +43,12 @@ formulario.addEventListener('submit', (evento) => {
     const menu = document.getElementById("navegacion");
 
     menu.classList.toggle("menu-visible");
+const botonMenu = document.getElementById("boton-menu");
+const navegacion = document.getElementById("navegacion");
+
+botonMenu.addEventListener("click", function () {
+navegacion.classList.toggle("menu-visible");
+});
 
 }
 });
