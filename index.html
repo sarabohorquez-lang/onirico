@@ -1,80 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <header class="mi-header">
-  <div class="barra-superior">
-    <h1>Oniric Dance</h1>
-    <!-- El botón del menú hamburguesa -->
-    <button class="btn-menu" id="btnMenu">
-      ☰
-    </button>
-  </div>
-  <!-- Los enlaces de navegación que inicialmente estarán ocultos -->
-  <nav id="navegacion" class="menu-oculto">
-    <a href="F.html">fundamentos𝄡</a>
-    <a href="P.html"> planimetria♝</a>
-    <a href="H.html">​historia✉</a>
-    <a href="CC.html"> crea tus coreografias⚅</a>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  </nav>
-   <link rel="stylesheet" href="style.css">
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oniric Dance</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
 <div class="contenedor-app">
+
+    <!-- ENCABEZADO -->
     <header class="mi-header">
-        <h1>Panel de Control</h1>
-    </header>
-    
-    <main class="contenido">
-        <p>Selecciona una opción para continuar:</p>
-        
-        <div class="grid-servicios">
-            <div class="card" id="btn-reportar">
-                <span class="icon">🚨</span>
-                <h3>Reportar Fallo</h3>
-            </div>
-            
-            <div class="card" id="btn-manual">
-                <span class="icon">📖</span>
-                <h3>Ver Manual</h3>
-            </div>
+
+        <div class="barra-superior">
+
+            <h1>Oniric Dance</h1>
+
+            <button class="btn-menu" id="btnMenu" aria-label="Abrir menú">
+                ☰
+            </button>
+
         </div>
+
+        <!-- MENÚ HAMBURGUESA -->
+        <nav id="navegacion">
+
+            <a href="F.html">Fundamentos 𝄡</a>
+            <a href="P.html">Planimetría ♝</a>
+            <a href="H.html">Historia ✉</a>
+            <a href="CC.html">Crea tus coreografías ⚅</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+    <main class="contenido">
+
+        <h2>Panel de Control</h2>
+
+        <p>Selecciona una opción para continuar:</p>
+
+        <div class="grid-servicios">
+
+            <div class="card" id="btn-reportar">
+
+                <span class="icon">🚨</span>
+
+                <h3>Reportar Fallo</h3>
+
+            </div>
+
+
+            <div class="card" id="btn-manual">
+
+                <span class="icon">📖</span>
+
+                <h3>Ver Manual</h3>
+
+            </div>
+
+        </div>
+
     </main>
-</div>
 
-<script src="script.js"></script>
-</body>
- <!-- GALERÍA -->
 
+    <!-- GALERÍA -->
     <section class="galeria">
 
-        <h2>galeria</h2>
+        <h2>Galería</h2>
 
         <div class="album">
 
-            <img src="imagenes/12.png" width="300" height="200" alt="Foto 1 del proyecto" class="img-proyecto">
+            <img src="imagenes/12.png"
+                 alt="Foto 1 del proyecto"
+                 class="img-proyecto">
 
-            <img src="imagenes/16.png" width="300" height="200" alt="Foto 2 del proyecto" class="img-proyecto">
+            <img src="imagenes/16.png"
+                 alt="Foto 2 del proyecto"
+                 class="img-proyecto">
 
-            <img src="imagenes/56.png" width="300" height="200" alt="Foto 3 del proyecto" class="img-proyecto">
+            <img src="imagenes/56.png"
+                 alt="Foto 3 del proyecto"
+                 class="img-proyecto">
 
-            <img src="imagenes/12.png" width="500" height="200" alt="Foto 4 del proyecto" class="img-proyecto" >
+            <img src="imagenes/12.png"
+                 alt="Foto 4 del proyecto"
+                 class="img-proyecto">
 
         </div>
 
+    </section>
 
-<section class="seccion-media">
-    
-  
 
-</section>
+    <!-- VIDEO -->
+    <section class="seccion-media">
 
-<!-- Video de YouTube  -->
-  <div class="video-contenedor">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qQlVtAiFARI?si=zvXnTfDEMYuQBBb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
+        <div class="video-contenedor">
+
+            <iframe
+                src="https://www.youtube.com/embed/qQlVtAiFARI?si=zvXnTfDEMYuQBBb8"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
